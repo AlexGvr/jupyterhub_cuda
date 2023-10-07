@@ -39,7 +39,7 @@
 ## Grant admin users permission to access single-user servers.
 #  
 #  Users should be properly informed if this is enabled.
-#c.JupyterHub.admin_access = False
+c.JupyterHub.admin_access = False
 
 ## DEPRECATED since version 0.7.2, use Authenticator.admin_users instead.
 #c.JupyterHub.admin_users = set()
@@ -701,7 +701,7 @@ c.Authenticator.admin_users = {'admin'}
 #      adduser -q --gecos "" --home /customhome/river --disabled-password river
 #  
 #  when the user 'river' is created.
-c.LocalAuthenticator.add_user_cmd = ['python3','/app/analysis/create-new-user.py','USERNAME']
+c.LocalAuthenticator.add_user_cmd = ['python3','/app/analysis/create-user.py','USERNAME']
 
 
 ## If set to True, will attempt to create local system users if they do not exist
