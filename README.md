@@ -4,17 +4,19 @@ JupyterHub allows using the power of notebooks to groups of users. With JupyterH
 
 JupyterHub Docker will provide us an environment with JupyterLab for every user.
 
+This JupyterHub has preinstall pytorch and tensorflow with gpu support and preinstalled oracle client to select from Oracle db.
+
 ## Create Container
 
-     $ docker pull rancavil/jupyterhub-docker
-     $ docker run -d --name <your-container-name> -p 8000:8000 rancavil/jupyterhub-docker
+     $ docker pull 5795162/jupyterhub_cuda
+     $ docker run -d --name <your-container-name> -p 8000:8000 --gpus all 5795162/jupyterhub_cuda
 
 Or
 
-     $ git clone https://gitlab.com/rancavil/jupyterhub-docker.git
-     $ cd jupyterhub-docker/
-     $ docker build -t jupyter-docker .
-     $ docker run -d --name <your-container-name> -p 8000:8000 jupyterhub-docker
+     $ git clone https://gitlab.com/rancavil/jupyterhub_cuda.git
+     $ cd jupyterhub_cuda/
+     $ docker build -t jupyterhub_cuda .
+     $ docker run -d --name <your-container-name> -p 8000:8000 jupyterhub_cuda
 
 In your browser go to:
 
