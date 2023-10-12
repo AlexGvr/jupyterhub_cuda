@@ -13,7 +13,7 @@ This JupyterHub has preinstall pytorch and tensorflow with gpu support and prein
 
 Or
 
-     $ git clone https://gitlab.com/rancavil/jupyterhub_cuda.git
+     $ git clone (https://github.com/AlexGvr/jupyterhub_cuda
      $ cd jupyterhub_cuda/
      $ docker build -t jupyterhub_cuda .
      $ docker run -d --name <your-container-name> -p 8000:8000 jupyterhub_cuda
